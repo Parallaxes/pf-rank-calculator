@@ -20,7 +20,7 @@
 {"@context":"https://schema.org","@type":"WebSite","headline":"Phantom Forces Rank Calculator","name":"pf-rank-calculator","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=d657dfece05a8220f53efdd3eec578250bff2506">
+    <link rel="stylesheet" href="/assets/css/style.css?v=7ea9b12481f90e57f803fdb6c43526c509faafe0">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -39,7 +39,7 @@
       <h1><a href="http://localhost:4000/">pf-rank-calculator</a></h1>
       
 
-      <h1>Phantom Forces Rank Calculator</h1>
+      <h1>Phantom Forces Combined Rank Calculator</h1>
 
 <form id="account-form">
   <table>
@@ -72,6 +72,39 @@
 
 <h2>Total XP: <span id="total-xp">0</span></h2>
 <h2>Total Rank: <span id="total-rank">0</span></h2>
+
+<h3 id="basic-usage">Basic Usage</h3>
+
+<ul>
+  <li>To add an account, complete the <code class="language-plaintext highlighter-rouge">Name</code>, <code class="language-plaintext highlighter-rouge">Rank</code>, and <code class="language-plaintext highlighter-rouge">XP</code> fields, then press <code class="language-plaintext highlighter-rouge">Add Account</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Name</code> is mandatory. Filling in either <code class="language-plaintext highlighter-rouge">Rank</code> or <code class="language-plaintext highlighter-rouge">XP</code> individually will automatically autocomplete the other.</li>
+  <li>Your combined rank is displayed at the bottom once you add all your accounts.</li>
+</ul>
+
+<h3 id="the-math"><em>The Math</em></h3>
+
+<p><code class="language-plaintext highlighter-rouge">XP</code> from <code class="language-plaintext highlighter-rouge">Rank</code> is calculated using this formula, where <code class="language-plaintext highlighter-rouge">n</code> is <code class="language-plaintext highlighter-rouge">Rank</code>:</p>
+
+<p><img src="/rankToXPCalc.png" alt="Rank to XP Calculation" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">Rank</code> from <code class="language-plaintext highlighter-rouge">XP</code> is calculated using this formula, where <code class="language-plaintext highlighter-rouge">n</code> is <code class="language-plaintext highlighter-rouge">Rank</code>:</p>
+
+<p><img src="/xpToRankCalc.png" alt="XP to Rank Calculation" /></p>
+
+<h3 id="some-notes">Some Notes</h3>
+<p>Made this because</p>
+<ol>
+  <li>I don’t want to use a Roblox game or spreadsheet and;</li>
+  <li>Fun!</li>
+</ol>
+
+<p>Totally did not spend 30 minutes trying to figure out how to run and test it locally with Jekyll and Bundler! Had to run it as root for some reason. Also can’t get LaTeX formatting :/</p>
+
+<p>Anyway, if you want to see the derivation of the formulas, you can DM me on Discord <code class="language-plaintext highlighter-rouge">parallaxis11</code></p>
+
+<p>Planning on adding some QoL improvements (removing accounts, styling, etc.)</p>
+
+<p>In the meantime, you can submit issues if you see any bugs :3</p>
 
 <script>
   let accounts = [];

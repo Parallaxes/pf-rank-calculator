@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: post
 title: Phantom Forces Rank Calculator
 ---
 
-<h1>Phantom Forces Rank Calculator</h1>
+<h1>Phantom Forces Combined Rank Calculator</h1>
 
 <form id="account-form">
   <table>
@@ -36,6 +36,37 @@ title: Phantom Forces Rank Calculator
 
 <h2>Total XP: <span id="total-xp">0</span></h2>
 <h2>Total Rank: <span id="total-rank">0</span></h2>
+
+### Basic Usage
+
+- To add an account, complete the `Name`, `Rank`, and `XP` fields, then press `Add Account`
+- `Name` is mandatory. Filling in either `Rank` or `XP` individually will automatically autocomplete the other.
+- Your combined rank is displayed at the bottom once you add all your accounts.
+
+### *The Math*
+
+`XP` from `Rank` is calculated using this formula, where `n` is `Rank`:
+
+![Rank to XP Calculation](rankToXPCalc.png)
+
+`Rank` from `XP` is calculated using this formula, where `n` is `Rank`:
+
+![XP to Rank Calculation](xpToRankCalc.png)
+
+
+
+### Some Notes
+Made this because
+1. I don't want to use a Roblox game or spreadsheet and;
+2. Fun!
+
+Totally did not spend 30 minutes trying to figure out how to run and test it locally with Jekyll and Bundler! Had to run it as root for some reason. Also can't get LaTeX formatting :/
+
+Anyway, if you want to see the derivation of the formulas, you can DM me on Discord `parallaxis11`
+
+Planning on adding some QoL improvements (removing accounts, styling, etc.)
+
+In the meantime, you can submit issues if you see any bugs :3
 
 <script>
   let accounts = [];
